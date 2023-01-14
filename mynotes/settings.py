@@ -84,12 +84,14 @@ WSGI_APPLICATION = 'mynotes.wsgi.application'
 # }
 
 
+VALUE = config("PASSWORD")
+
 DATABASES = {     
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': config('PASSWORD'),
+        'PASSWORD': 'VALUE',
         'HOST': 'containers-us-west-185.railway.app',
         'PORT': '7452'  
     } 
